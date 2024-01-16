@@ -1,0 +1,24 @@
+API connects a data source for the user
+---
+tags:
+- Connect Data API
+"consumes": ["multipart/form-data"]
+"parameters": [
+  {
+    "name": "file",
+    "in": "formData",
+    "required": false,
+    "type": "file"
+  },
+  {
+    "name": "url",
+    "in": "formData",
+    "required": false,
+    "type": "string"
+  }
+]
+responses:
+  500:
+    description: Something went wrong and couldn't connect to the data source
+  200:
+    description: Data Source Connected Successfully.
